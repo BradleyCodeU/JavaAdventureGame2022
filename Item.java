@@ -13,13 +13,14 @@ Item (11 tasks)
  dibs WB + void weaken()
  */
 
+import java.util.Random;
 
 
 public class Item
 {
   // instance variables go here
   // private instance vars for name, strength, description, int magicType, Random rng
-  import java.util.Random;
+
   private String name;
   private int strength;
   private String description;
