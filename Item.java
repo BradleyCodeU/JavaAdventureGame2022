@@ -4,10 +4,10 @@ Item (11 tasks)
  dibs AJ + NoArgsConstructor
  dibs AJ + Item(String _name, String _description)
  dibs AJ + int getMagicType()
- dibs EW + String getName()
- dibs EW + int getStrength()
- dibs EW + void setDescription(String d)
- dibs EW + void setName(String _name)
+ + String getName()
+ + int getStrength()
+ + void setDescription(String d)
+ + void setName(String _name)
  dibs WB + isBroken()
  dibs WB + toString() // returns the description
  dibs WB + void weaken()
@@ -42,22 +42,22 @@ public class Item
 
   public String getName()
   {
-    return "x";
+    return name;
   }
 
   public void setName(String _name)
   {
-
+    name = _name;
   }
 
   public int getStrength()
   {
-    return 0;
+    return strength;
   }
 
   public void setDescription(String _string)
   {
-
+    description = _string;
   }
 
   // sets strength to be strength divided by two
