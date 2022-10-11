@@ -10,10 +10,10 @@ Room (14 tasks)
  dibs AB + String getPossibleDirections()
  dibs RK + void linkRoom(Room r, String direction)
  dibs RK + void setCharacter(Npc character)
- dibs RK + void setDescription(String d)
+ dibs RK + void setDescription(String d) DONE
  + void setItem(Item i)
  + void setName(String _name)
- dibs RK + toString() // returns the description
+ dibs RK + toString() // returns the description DONE
 */
 public class Room{
   private String name;
@@ -74,20 +74,37 @@ public class Room{
   }
 
   // precondition: direction is either "north" or "south" or "east" or "west"
-  public void linkRoom(Room r, String direction)
+ public void linkRoom(Room r, String direction)
   {
+    if (direction == "south") {
+      south = r;
+    }
+    if (direction == "north") {
+      north = r;
+    }
+    if (direction == "west") {
+      west = r;
+    }
+    if (direction == "east") {
+      east = r;
+    }
 
-  }
+     else {
+       null;
+      }
+    }
+  
+  
 
   // sets the character to a Npc object that is passed into this method
-  public void setCharacter(Npc character)
+  public void setCharacter(Npc _character)
   {
-
+     character = _character;
   }
 
   public void setDescription(String newDescription)
   {
-
+    description = newDescription;
   }
 
   public void setItem(Item i)
@@ -102,7 +119,7 @@ public class Room{
 
   public String toString()
   {
-    return "x";
+    return "Room name: " + name + "Description: " + description;
   }
 
 
