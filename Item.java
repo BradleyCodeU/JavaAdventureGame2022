@@ -1,6 +1,6 @@
 /*
 Item (11 tasks)
- dibs AJ - private instance vars for name, strength, description, int magicType, Random rng
+ dibs AJ - private instance vars for name, strength, description, int magicType, Random rng 
  dibs AJ + NoArgsConstructor
  dibs AJ + Item(String _name, String _description)
  dibs AJ + int getMagicType()
@@ -12,23 +12,38 @@ Item (11 tasks)
  dibs WB + toString() // returns the description
  dibs WB + void weaken()
  */
+
 import java.util.Random;
+
 
 public class Item
 {
   // instance variables go here
   // private instance vars for name, strength, description, int magicType, Random rng
 
+  private String name;
+  private int strength;
+  private String description;
+  private int magicType;
+  Random rng = new Random();
   
   public Item()
   {
     // set magicType to a random number 1-3 (inclusive)
+    name = "";
+    strength = 0;
+    description = "";
+    magicType = rng.nextInt(3)+1;
   }
 
 
   public Item(String _name, String _description)
   {
+    name = _name;
+    strength = 0;
+    description = _description;
     // set magicType to 1
+    magicType = 1;
   }
   public String toString(){
     return description.toString();
@@ -37,7 +52,7 @@ public class Item
 
   public int getMagicType()
   {
-    return 0;
+    return magicType;
   }
 
   public String getName()
