@@ -1,6 +1,6 @@
 /*
 Item (11 tasks)
- dibs AJ - private instance vars for name, strength, description, int magicType, Random rng ✓
+ dibs AJ - private instance vars for name, strength, description, int magicType, Random rng 
  dibs AJ + NoArgsConstructor
  dibs AJ + Item(String _name, String _description)
  dibs AJ + int getMagicType()
@@ -30,6 +30,9 @@ public class Item
   public Item()
   {
     // set magicType to a random number 1-3 (inclusive)
+    name = "";
+    strength = 0;
+    description = "";
     magicType = rng.nextInt(3)+1;
   }
 
@@ -37,6 +40,7 @@ public class Item
   public Item(String _name, String _description)
   {
     name = _name;
+    strength = 0;
     description = _description;
     // set magicType to 1
     magicType = 1;
