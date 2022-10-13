@@ -72,8 +72,10 @@ public class Room{
   {
     return "x";
   }
-
-  // precondition: direction is either "north" or "south" or "east" or "west"
+  /** 
+  @param
+  
+  // precondition: direction is either "north" or "south" or "east" or "west" */
  public void linkRoom(Room r, String direction)
   {
     if (direction == "south") {
