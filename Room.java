@@ -72,8 +72,10 @@ public class Room{
   {
     return "x";
   }
+  
   /** 
-  @param
+  @param direction - direction should be the lowercase words "north" "south" "east" or "west
+  @param r - a room object should be supplied for the variable r
   
   // precondition: direction is either "north" or "south" or "east" or "west" */
  public void linkRoom(Room r, String direction)
@@ -91,19 +93,23 @@ public class Room{
       east = r;
     }
 
-     else {
-       null;
-      }
     }
   
   
-
+  /** 
+  @param a npc object that is then stored into the instance variable character
   // sets the character to a Npc object that is passed into this method
+
+ */
   public void setCharacter(Npc _character)
   {
      character = _character;
   }
 
+  /** 
+  @param  String that describes a room. example: "dark room that is very small"
+
+ */
   public void setDescription(String newDescription)
   {
     description = newDescription;
@@ -118,7 +124,11 @@ public class Room{
   {
 
   }
-
+  
+  /** 
+  @return the names of the instance variables and what is stored inside them
+  
+ */
   public String toString()
   {
     return "Room name: " + name + "Description: " + description;
