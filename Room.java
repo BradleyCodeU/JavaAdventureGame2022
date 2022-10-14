@@ -10,10 +10,10 @@ Room (14 tasks)
  dibs AB + String getPossibleDirections()
  dibs RK + void linkRoom(Room r, String direction)
  dibs RK + void setCharacter(Npc character)
- dibs RK + void setDescription(String d)
+ dibs RK + void setDescription(String d) DONE
  + void setItem(Item i)
  + void setName(String _name)
- dibs RK + toString() // returns the description
+ dibs RK + toString() // returns the description DONE
 */
 public class Room{
   private String name;
@@ -72,22 +72,47 @@ public class Room{
   {
     return "x";
   }
-
-  // precondition: direction is either "north" or "south" or "east" or "west"
-  public void linkRoom(Room r, String direction)
+  
+  /** 
+  @param direction - direction should be the lowercase words "north" "south" "east" or "west
+  @param r - a room object should be supplied for the variable r
+  
+  // precondition: direction is either "north" or "south" or "east" or "west" */
+ public void linkRoom(Room r, String direction)
   {
+    if (direction == "south") {
+      south = r;
+    }
+    if (direction == "north") {
+      north = r;
+    }
+    if (direction == "west") {
+      west = r;
+    }
+    if (direction == "east") {
+      east = r;
+    }
 
-  }
-
+    }
+  
+  
+  /** 
+  @param a npc object that is then stored into the instance variable character
   // sets the character to a Npc object that is passed into this method
-  public void setCharacter(Npc character)
-  {
 
+ */
+  public void setCharacter(Npc _character)
+  {
+     character = _character;
   }
 
+  /** 
+  @param  String that describes a room. example: "dark room that is very small"
+
+ */
   public void setDescription(String newDescription)
   {
-
+    description = newDescription;
   }
 
   public void setItem(Item i)
@@ -99,10 +124,14 @@ public class Room{
   {
 
   }
-
+  
+  /** 
+  @return the names of the instance variables and what is stored inside them
+  
+ */
   public String toString()
   {
-    return "x";
+    return "Room name: " + name + "Description: " + description;
   }
 
 
