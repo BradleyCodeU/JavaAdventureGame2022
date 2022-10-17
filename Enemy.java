@@ -1,9 +1,9 @@
 /*
 Enemy extends Npc (8 tasks)
- dibs LB - private instance vars for health, int magicWeakness, attackName
- dibs LB + NoArgsConstructor
- dibs LB + Enemy(String _name, String _description)
- dibs LB + String getAttackName()
+ - private instance vars for health, int magicWeakness, attackName
+ + NoArgsConstructor
+ + Enemy(String _name, String _description)
+ + String getAttackName()
  dibs AC + int getHealth
  dibs AC + int getMagicWeakness()
  dibs AC + void loseHealth(int h)
@@ -29,15 +29,17 @@ public class Enemy extends Npc
   public Enemy(){
     super();
     health = 100;
-    magicWeakness = 35;
+    magicWeakness = 1;
     attackName = "slap";
+    enemyCounter++;
   }
 
   public Enemy(String enemyName, String enemyDescription){
     super(enemyName,enemyDescription);
     health = 100;
-    magicWeakness = 35;
+    magicWeakness = 1;
     attackName = "slap";
+    enemyCounter++;
   }
 
   public int getHealth(){
