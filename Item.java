@@ -1,16 +1,16 @@
 /*
 Item (11 tasks)
- dibs AJ - private instance vars for name, strength, description, int magicType, Random rng 
- dibs AJ + NoArgsConstructor
- dibs AJ + Item(String _name, String _description)
- dibs AJ + int getMagicType()
+ - private instance vars for name, strength, description, int magicType, Random rng 
+ + NoArgsConstructor
+ + Item(String _name, String _description)
+ + int getMagicType()
  + String getName()
  + int getStrength()
  + void setDescription(String d)
  + void setName(String _name)
- dibs WB + isBroken()
- dibs WB + toString() // returns the description
- dibs WB + void weaken()
+ + isBroken()
+ + toString() // returns the description
+ + void weaken()
  */
 
 import java.util.Random;
