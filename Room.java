@@ -1,19 +1,19 @@
 /*
 Room (14 tasks)
- dibs SW - private instance vars for name, description, character, roomItem, Room north, Room south, Room east, Room west
- dibs SW + NoArgsConstructor
- dibs SW + Room(String _name)
- dibs SW + Npc getCharacter()
+ - private instance vars for name, description, character, roomItem, Room north, Room south, Room east, Room west
+ + NoArgsConstructor
+ + Room(String _name)
+ + Npc getCharacter()
  dibs TC + Item getItem()
  dibs TC + Room getLocationTo(String direction)
  dibs TC + String getName()
  dibs TC + String getPossibleDirections()
- dibs RK + void linkRoom(Room r, String direction)
- dibs RK + void setCharacter(Npc character)
- dibs RK + void setDescription(String d) DONE
+ + void linkRoom(Room r, String direction)
+ + void setCharacter(Npc character)
+ + void setDescription(String d)
  + void setItem(Item i)
  + void setName(String _name)
- dibs RK + toString() // returns the description DONE
+ + toString() // returns the description
 */
 public class Room{
   private String name;
