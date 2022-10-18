@@ -31,7 +31,7 @@ public class Item
   {
     // set magicType to a random number 1-3 (inclusive)
     name = "";
-    strength = 0;
+    strength = 50;
     description = "";
     magicType = rng.nextInt(3)+1;
   }
@@ -40,7 +40,7 @@ public class Item
   public Item(String _name, String _description)
   {
     name = _name;
-    strength = 0;
+    strength = 50;
     description = _description;
     // set magicType to 1
     magicType = 1;
