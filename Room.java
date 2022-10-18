@@ -72,6 +72,10 @@ public class Room{
     else if (direction.equals("west")){
      return west; 
     }
+    else {
+      // if none of those conditions, then return the current room
+     
+    }
   }
 
   public String getName()
@@ -155,7 +159,7 @@ public class Room{
  */
   public String toString()
   {
-    return "Room name: " + name + "Description: " + description;
+    return "Room name: " + name + " Description: " + description;
   }
 
 
