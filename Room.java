@@ -141,12 +141,12 @@ public class Room{
 
   public void setItem(Item i)
   {
-
+    item = i;
   }
 
   public void setName(String _name)
   {
-
+    name = _name;
   }
   
   /** 
