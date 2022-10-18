@@ -99,6 +99,7 @@ public class Room{
     if(west != null){
       possibleDirections += "west, "
     }
+   
   }
   
   /** 
