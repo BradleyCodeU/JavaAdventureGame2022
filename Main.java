@@ -400,11 +400,11 @@ public class Main
       backpack.weaken();
       if(backpack.isBroken())
       {
-        typewriter(50, "Oh no! Your " + backpack.getName() + " broke!\n");
+        typewriter(50, "Oh no! ! ! ! ! ! ! Your " + backpack.getName() + " broke! ! ! ! ! ! !\n");
         backpack = null;
       }
     }
-    else
+    if(!command.equals("r"))
     {
       typewriter(50, "Sorry, I don't know how to " + command);
       typewriter(50, ". Valid options: p, k, r" + (backpack == null ? "" : ", x = use " + backpack.getName()) + "\n");
