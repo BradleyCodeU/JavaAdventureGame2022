@@ -404,7 +404,7 @@ public class Main
         backpack = null;
       }
     }
-    if(!command.equals("r"))
+    else if(!command.equals("r"))
     {
       typewriter(50, "Sorry, I don't know how to " + command);
       typewriter(50, ". Valid options: p, k, r" + (backpack == null ? "" : ", x = use " + backpack.getName()) + "\n");
