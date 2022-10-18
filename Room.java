@@ -85,19 +85,19 @@ public class Room{
 
   public String getPossibleDirections()
   {
-    String possibleDirections = "Here are the directions you can go: ";
+    String possibleDirections = "Type either: ";
     if(north != null){
-      possibleDirections += "north "
+      possibleDirections += "north, "
     }
     if(south != null){
-      possibleDirections += "south "
+      possibleDirections += "south, "
     }
     if(east != null){
-      possibleDirections += "east "
+      possibleDirections += "east, "
      
     }
     if(west != null){
-      possibleDirections += "west "
+      possibleDirections += "west, "
     }
   }
   
