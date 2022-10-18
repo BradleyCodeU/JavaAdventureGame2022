@@ -4,10 +4,10 @@ Enemy extends Npc (8 tasks)
  + NoArgsConstructor
  + Enemy(String _name, String _description)
  + String getAttackName()
- dibs AC + int getHealth
- dibs AC + int getMagicWeakness()
- dibs AC + void loseHealth(int h)
- dibs AC + void setAttackName()
+ + int getHealth
+ + int getMagicWeakness()
+ + void loseHealth(int h)
+ + void setAttackName()
 */
 public class Enemy extends Npc
 {
@@ -43,12 +43,12 @@ public class Enemy extends Npc
   }
 
   public int getHealth(){
-    return 0;
+    return health;
   }
 
   // sets health to be health minus healthLost
   public void loseHealth(int healthLost){
-
+    health -= healthLost;
   }
 
   public String getAttackName(){
@@ -56,11 +56,11 @@ public class Enemy extends Npc
   }
 
   public int getMagicWeakness(){
-    return 0;
+    return magicWeakness;
   }
 
   public void setAttackName(String _attackName){
-
+    attackName = _attackName;
   }
 }
 
