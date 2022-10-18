@@ -60,16 +60,16 @@ public class Room{
  // precondition: direction is either "north" or "south" or "east" or "west"
   public Room getLocationTo(String direction)
   {
-    if (direction == "north"){
+    if (direction.equals("north")){
      return north; 
     }
-   else if (direction == "south"){
+    else if (direction.equals("south")){
      return south; 
     }
-   else if (direction == "east"){
+    else if (direction.equals("east")){
      return east; 
     }
-   else if (direction == "west"){
+    else if (direction.equals("west")){
      return west; 
     }
   }
