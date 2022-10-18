@@ -63,7 +63,7 @@ public class Npc
 
   public String toString()
   {
-    return "x";
+    return description.toString();
   }
 
 
