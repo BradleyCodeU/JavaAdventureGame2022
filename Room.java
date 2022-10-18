@@ -1,19 +1,19 @@
 /*
 Room (14 tasks)
- - private instance vars for name, description, character, roomItem, Room north, Room south, Room east, Room west
- + NoArgsConstructor
- + Room(String _name)
- + Npc getCharacter()
+ dibs SW - private instance vars for name, description, character, roomItem, Room north, Room south, Room east, Room west
+ dibs SW + NoArgsConstructor
+ dibs SW + Room(String _name)
+ dibs SW + Npc getCharacter()
  dibs TC + Item getItem()
  dibs TC + Room getLocationTo(String direction)
  dibs TC + String getName()
  dibs TC + String getPossibleDirections()
- + void linkRoom(Room r, String direction)
- + void setCharacter(Npc character)
- + void setDescription(String d)
+ dibs RK + void linkRoom(Room r, String direction)
+ dibs RK + void setCharacter(Npc character)
+ dibs RK + void setDescription(String d) DONE
  + void setItem(Item i)
  + void setName(String _name)
- + toString() // returns the description
+ dibs RK + toString() // returns the description DONE
 */
 public class Room{
   private String name;
@@ -54,23 +54,47 @@ public class Room{
 
   public Item getItem()
   {
-   return null;
+   return roomItem;
   }
  
  // precondition: direction is either "north" or "south" or "east" or "west"
   public Room getLocationTo(String direction)
   {
-    return null
+    if (direction.equals("north")){
+     return north; 
+    }
+    else if (direction.equals("south")){
+     return south; 
+    }
+    else if (direction.equals("east")){
+     return east; 
+    }
+    else if (direction.equals("west")){
+     return west; 
+    }
   }
 
   public String getName()
   {
-    return "x";
+    return name;
   }
 
   public String getPossibleDirections()
   {
-    return "x";
+    String possibleDirections = "Here are the directions you can go: ";
+    if(north != null){
+      possibleDirections += "north "
+    }
+    if(south != null){
+      possibleDirections += "south "
+    }
+    if(east != null){
+      possibleDirections += "east "
+     
+    }
+    if(west != null){
+      possibleDirections += "west "
+    }
   }
   
   /** 
